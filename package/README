@@ -1,0 +1,63 @@
+            IPv6 NAT - A NAT(network address translation) for IPv6
+
+1. Instructions
+
+    This is a simple NAT for IPv6. Make sure if you really need it before
+    using it. (If you don't know what is a NAT, you don't need it.)
+
+    Before running this, please:
+    * Disable IPv6 kernel forwarding;
+    * Block out-going IPv6 TCP reset packets on WAN interface;
+    * Block out-going ICMPv6 neighbour-advertisement packets on LAN
+      interface;
+    * Block out-going ICMPv6 destination-unreachable packets.
+
+    Usage:
+	ipv6_nat LAN_interface [-w WAN_interface_number] WAN_interface0 [WAN0_router_MAC] [WAN_interface1 [WAN1_router_MAC]]...
+
+    "ipv6_nat.sh" is an example to run this tool.
+
+    Static port mapping is configured in /etc/ipv6nat_port_map.conf , each
+    line of which contains a port mapping definition. For example:
+
+      tcp  4422  00:AA:BB:CC:DD:EE  2001:2:3:4:00af:cfaa:bbcc:ddee  22  0
+
+    defined a TCP port mapping from [2001:2:3:4:00af:cfaa:bbcc:ddee]:22 to
+    [WAN IP]:4422 via WAN interface 0, where 00:AA:BB:CC:DD:EE is the MAC address of
+    [2001:2:3:4:00af:cfaa:bbcc:ddee].
+    NOTE: each line starts with '#' will be treated as comment and ignored!
+
+
+2. System Requirements
+
+    * OS is Linux;
+    * IPv6 is compiled into the kernel;
+    * ip6tables is installed.
+
+
+3. Functions
+
+    * IPv6 auto configuration (If you run it on the gateway, all the PCs
+      in the LAN will get 'fake' IPv6 global addresses and IPv6 route);
+    * Port forwarding for TCP, UDP and ICMP-Echo;
+    * Static port mapping for TCP and UDP;
+	* Multiple WAN interfaces are supported.
+
+
+4. License (GPL License)
+
+    Copyright (C) 2010-2011 CTQY <qiyi.caitian@gmail.com>
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.

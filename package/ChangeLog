@@ -1,0 +1,26 @@
+ipv6_nat Change Log
+
+0.0.15 (2011-11-04)
+	* Fixed a bug on getting router's MAC address.
+
+0.0.14 (2011-06-09)
+	* Fixed a severe error on parsing ipv6 addresses.
+
+0.0.13 (2011-05-17)
+	* Traffic balancing is supported when using multiple WAN interfaces;
+	* Minor optimization in Port_map.
+
+0.0.9 (2011-05-03)
+	* Multiple WAN interfaces are supported (with random load balance);
+	* Fixed crash when running with VPN;
+	* Minor bugs fixed.
+
+0.0.6 (2010-11-04)
+	* Fixed a parsing error (may crash) on ipv6nat_port_map.conf.
+
+0.0.5 (2010-11-03)
+	* Static port mapping of TCP and UDP.
+
+0.0.1 (2010-10-31)
+	* Basic function implemented;
+	* Create the ChangeLog file :).
