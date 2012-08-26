@@ -4,7 +4,7 @@ pkgname=ipv6_nat
 #true && pkgname=('ipv6_nat-c++')
 pkgver=0.0.15
 pkgrel=1
-pkgdesc=""
+pkgdesc="This is a simple NAT for IPv6"
 arch=('x86_64' 'i686')
 url="http://ipv6nat.sourceforge.net/"
 license=('LGPL3')
@@ -12,6 +12,7 @@ depends=('')
 install="ipv6_nat.install"
 source=("https://github.com/justzx2011/PackageScripts/tarball/$pkgver")
 md5sums=('fbdfeae9a55e0d5760253f341754cd63')
+
 #package() {
 #  cd ${srcdir}/justzx2011-openyoudao-*/
 #  # bin
