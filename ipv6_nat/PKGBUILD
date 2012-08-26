@@ -1,22 +1,16 @@
-# Maintainer: justzx <justzx2011@gmail.com>
-pkgname=openyoudao
-#true && pkgname=('openyoudao-gtk2')
-pkgver=alpha
+# Author: qiyicaitian <qiyi.caitian@gmail.com>
+# Package Maintainer: justzx <justzx2011@gmail.com>
+pkgname=ipv6_nat
+#true && pkgname=('ipv6_nat-c++')
+pkgver=	ipv6_nat-0.0.15
 pkgrel=1
-pkgdesc="a youdao client for linux"
+pkgdesc=""
 arch=('x86_64' 'i686')
-url="http://www.openyoudao.org/"
+url="http://ipv6nat.sourceforge.net/"
 license=('LGPL3')
-depends=('python2' 'xclip' 'curl' 'inotify-tools' 'python-xlib' 'python2-lxml'  'pywebkitgtk' 'python2-beautifulsoup3')
-#extra/xclip 0.12-3
-#community/inotify-tools 3.14-2
-#community/python-xlib
-#extra/python2-lxml 2.3.4-2
-#aur/python-requests 0.13.1-1
-#extra/pywebkitgtk 1.1.8-2
-#community/python2-beautifulsoup3 3.2.1-1
-install="openyoudao.install"
-source=("https://github.com/justzx2011/openyoudao/tarball/$pkgver")
+depends=('')
+install="ipv6_nat.install"
+source=("https://github.com/justzx2011/PackageScripts/tarball/$pkgver")
 md5sums=('683081643a1c0291bd684063bf3c8557')
 package() {
   cd ${srcdir}/justzx2011-openyoudao-*/
