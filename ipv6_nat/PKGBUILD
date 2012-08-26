@@ -2,7 +2,7 @@
 # Package Maintainer: justzx <justzx2011@gmail.com>
 pkgname=ipv6_nat
 #true && pkgname=('ipv6_nat-c++')
-pkgver=	0.0.15
+pkgver=0.0.15
 pkgrel=1
 pkgdesc=""
 arch=('x86_64' 'i686')
