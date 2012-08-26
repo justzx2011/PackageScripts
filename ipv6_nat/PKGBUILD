@@ -11,8 +11,8 @@ license=('LGPL3')
 depends=('')
 install="ipv6_nat.install"
 source=("https://github.com/justzx2011/PackageScripts/tarball/$pkgver")
-md5sums=('')
-package() {
+md5sums=('fbdfeae9a55e0d5760253f341754cd63')
+#package() {
 #  cd ${srcdir}/justzx2011-openyoudao-*/
 #  # bin
 #  install -Dm755 scripts/openyoudao \
@@ -30,4 +30,4 @@ package() {
 #  # desktop file
 #  install -Dm644 desktop/openyoudao.desktop \
 #    "$pkgdir/usr/share/applications/openyoudao.desktop"
-}
+#}
