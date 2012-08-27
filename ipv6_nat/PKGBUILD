@@ -11,25 +11,9 @@ license=('LGPL3')
 depends=('')
 install="ipv6_nat.install"
 source=("https://github.com/justzx2011/PackageScripts/tarball/$pkgver")
-#source=("http://sourceforge.net/projects/ipv6nat/files/ipv6_nat-src-0.0.15.zip/download/")
 md5sums=('fbdfeae9a55e0d5760253f341754cd63')
-
-#package() {
-#  cd ${srcdir}/justzx2011-openyoudao-*/
-#  # bin
-#  install -Dm755 scripts/openyoudao \
-#    "$pkgdir/usr/bin/openyoudao"
-#  # libs
-#  #/var/cache/openyoudao#
-#  install -d "$pkgdir/usr/lib/openyoudao"
-#  install -Dm644 ./*.py \
-#    "$pkgdir/usr/lib/openyoudao"
-#  install -d "$pkgdir/var/cache/openyoudao"
-#  cp -rf cache/* "$pkgdir/var/cache/openyoudao/."
-#  chmod -R 755 "$pkgdir/var/cache/openyoudao"
-#  #install -dm644 cache/* \
-#  #  "$pkgdir/usr/lib/python2.7/site-packages/openyoudao/cache"
-#  # desktop file
-#  install -Dm644 desktop/openyoudao.desktop \
-#    "$pkgdir/usr/share/applications/openyoudao.desktop"
-#}
+build() {
+  cd ${srcdir}/justzx2011-PackageScripts-*/
+  make
+  sudo make install
+}
