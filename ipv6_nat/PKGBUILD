@@ -11,6 +11,7 @@ license=('LGPL3')
 depends=('')
 install="ipv6_nat.install"
 source=("https://github.com/justzx2011/PackageScripts/tarball/$pkgver")
+#source=("http://sourceforge.net/projects/ipv6nat/files/ipv6_nat-src-0.0.15.zip/download/")
 md5sums=('fbdfeae9a55e0d5760253f341754cd63')
 
 #package() {
