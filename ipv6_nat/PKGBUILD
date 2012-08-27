@@ -15,5 +15,11 @@ md5sums=('46cd57a6e239e06fb978ff65f1239fbf')
 build() {
   cd ${srcdir}/justzx2011-PackageScripts-*/
   make
-  sudo make install
+}
+package() {
+  cd ${srcdir}/justzx2011-PackageScripts-*/
+  # sbin
+  sudo cp ipv6_nat /usr/sbin/
+  # conf
+  sudo cp ipv6nat_port_map.conf /etc/ 
 }
