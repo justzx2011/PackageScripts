@@ -2,27 +2,27 @@
 # Package Maintainer: justzx <justzx2011@gmail.com>
 pkgname=ipv6_nat
 #true && pkgname=('ipv6_nat-c++')
-pkgver=0.0.15
+pkgver=0.0.15a
 pkgrel=1
 pkgdesc="This is a simple NAT for IPv6"
 arch=('x86_64' 'i686')
 url="http://ipv6nat.sourceforge.net/"
-license=('LGPL3')
+license=('LGPL')
 #depends=('')
 install="ipv6_nat.install"
-source=("https://github.com/justzx2011/PackageScripts/tarball/$pkgver")
-md5sums=('a2978c58758d60b4fb8e2d3b6545a58f')
+source=("http://nchc.dl.sourceforge.net/project/ipv6nat/ipv6_nat-src-0.0.15a.tar.bz2")
+md5sums=('cf944c0b743af8c6f28a650d9efdc7a2')
 build() {
-  cd ${srcdir}/justzx2011-PackageScripts-*/
+  cd ${srcdir}/
   make
 }
 package() {
-  cd ${srcdir}/justzx2011-PackageScripts-*/
+  cd ${srcdir}/
   install -d "$pkgdir/etc/ipv6_nat"
   install -Dm644 ipv6_nat.sh \
     "$pkgdir/etc/ipv6_nat"
   install -Dm644 ipv6nat_port_map.conf \
-    "$pkgdir/etc"
+    "$pkgdir/etc/ipv6_nat"
   install -Dm755 ipv6_nat \
-    "$pkgdir/usr/bin"	
+    "$pkgdir/usr/sbin"	
 }
