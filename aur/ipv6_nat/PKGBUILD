@@ -22,7 +22,7 @@ package() {
   install -Dm644 ipv6_nat.sh \
     "$pkgdir/etc/ipv6_nat"
   install -Dm644 ipv6nat_port_map.conf \
-    "$pkgdir/etc/ipv6_nat"
+    "$pkgdir/etc"
   install -Dm755 ipv6_nat \
     "$pkgdir/usr/bin"	
 }
